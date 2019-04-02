@@ -3,6 +3,8 @@
 #define PGIO_MODE_OUTPUT 0x01
 
 #define LED_STATE_ON 0x01
+
+#define DELAY 10000
 /**
  * main.c
  */
@@ -16,6 +18,6 @@ void main(void)
 	while(1)
 	{
 	    P1OUT ^= LED_STATE_ON;
-	    for(i = 10000; i> 0; i--);
+	    for(i = DELAY; i> 0; i--);
 	}
 }
